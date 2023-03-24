@@ -3,9 +3,6 @@
 
     background: url('../../../assets/img/start/start-screen-gradient-background.png') center (center / cover) no-repeat;
 
-    // .start__wrapper
-    &__wrapper {
-    }
     // .start__puppy
     &__puppy {
         img {
@@ -55,19 +52,48 @@
     align-content: center;
     // .menu__item
     &__item {
+        display: block;
+        
+        transition: 0.5s all;
+        
+        &:hover {
+            .menu__text {
+                color: $color-light-s;
+            }
+        }
+
+        &_active {
+            .menu__text {
+                color: $color-light-s;
+            }
+
+            .menu__line {
+                opacity: 1;
+                width: 100%;
+            }
+        }
     }
     // .menu__link
-    &__link {
-        display: block;
+    &__text {
         font-weight: 400;
         font-size: 15px;
         line-height: 160%;
         /* identical to box height, or 24px */
-
+    
         color: $color-dark-s;
+
+        transition: inherit;
     }
     // .menu__line
     &__line {
+        margin: 0 auto;
+        height: 3px;
+        // width: 100%;
+        background-color: $color-primary;
+
+        transition: inherit;
+        opacity: 0;
+        width: 0;
     }
 }
 .start-main {

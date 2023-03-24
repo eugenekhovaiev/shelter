@@ -15,6 +15,12 @@
 
     color: $color-dark-3xl;
 
+    transition: 0.5s all;
+
+    &:hover {
+        background-color: $color-primary-light;
+        // transform: translateY(-2px);
+    }
 
     // .button_start
     &_start {
