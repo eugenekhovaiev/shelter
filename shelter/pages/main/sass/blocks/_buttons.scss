@@ -1,9 +1,10 @@
 .button {
     padding: 15px 45px;
 
+    width: fit-content;
     height: 52px;
 
-    display: inline-block;
+    display: block;
     background-color: $color-primary;
     border-radius: 100px;
 
