@@ -55,5 +55,41 @@
     &_next {
         transform: rotate(180deg);
     }
+
+    &_paginator {
+        width: 52px;
+        height: 52px;
+
+        border: 2px solid $color-primary;
+        border-radius: 100px;
+        background-color: $color-light-xl;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: 0.5s all;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-primary-light;
+        }
+
+        &_active {
+            background: $color-primary;
+        }
+
+        &_inactive {
+            border: 2px solid $color-dark-s;
+            color: $color-dark-s;
+
+            cursor: default;
+
+            &:hover {
+                background-color: $color-light-xl;
+            }
+        }
+    }
 }
 
