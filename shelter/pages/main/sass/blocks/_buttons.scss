@@ -1,6 +1,8 @@
 .button {
     padding: 15px 45px;
 
+    height: 52px;
+
     display: inline-block;
     background-color: $color-primary;
     border-radius: 100px;
@@ -22,7 +24,35 @@
         // transform: translateY(-2px);
     }
 
-    // .button_start
-    &_start {
+    &_secondary {
+        background-color: $color-light-xl;
+        border: 2px solid $color-primary;
+    }
+
+    &_arrow {
+        width: 52px;
+        height: 52px;
+
+        border: 2px solid $color-primary;
+        border-radius: 100px;
+        background-color: $color-light-xl;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: 0.5s all;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-primary-light;
+        }
+
+    }
+
+    &_next {
+        transform: rotate(180deg);
     }
 }
+

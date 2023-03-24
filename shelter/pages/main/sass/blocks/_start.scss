@@ -43,6 +43,8 @@
         letter-spacing: 0.1em;
 
         color: $color-light-xl;
+
+        text-align: center;
     }
 }
 .menu {
@@ -99,7 +101,7 @@
 .start-main {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    column-gap: auto;
+    column-gap: 42px;
     justify-content: space-between;
 }
 .start-content {
