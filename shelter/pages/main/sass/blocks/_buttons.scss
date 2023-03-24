@@ -1,0 +1,22 @@
+.button {
+    padding: 15px 45px;
+
+    display: inline-block;
+    background-color: $color-primary;
+    border-radius: 100px;
+
+    font-family: 'Georgia';
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    /* identical to box height, or 22px */
+
+    letter-spacing: 0.06em;
+
+    color: $color-dark-3xl;
+
+
+    // .button_start
+    &_start {
+    }
+}

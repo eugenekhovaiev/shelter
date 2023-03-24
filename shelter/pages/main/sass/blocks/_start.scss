@@ -1,0 +1,107 @@
+.start {
+    padding-top: 30px;
+
+    background: url('../../../assets/img/start/start-screen-gradient-background.png') center (center / cover) no-repeat;
+
+    // .start__wrapper
+    &__wrapper {
+    }
+    // .start__puppy
+    &__puppy {
+        img {
+            display: block;
+        }
+    }
+}
+
+.header {
+    margin-bottom: 90px;
+
+    display: grid;
+    grid-template-columns: minmax(184px, auto)  443px;
+    justify-content: space-between;
+    column-gap: auto;
+
+    // .header__logo
+    &__logo {
+    }
+    // .header__title
+    &__title {
+        margin-bottom: 10px;
+
+        font-family: 'Georgia';
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 110%;
+        /* or 35px */
+        letter-spacing: 0.06em;
+
+        color: $color-primary;
+    }
+    // .header__subtitle
+    &__subtitle {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+
+        color: $color-light-xl;
+    }
+}
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 35px;
+    align-content: center;
+    // .menu__item
+    &__item {
+    }
+    // .menu__link
+    &__link {
+        display: block;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        /* identical to box height, or 24px */
+
+        color: $color-dark-s;
+    }
+    // .menu__line
+    &__line {
+    }
+}
+.start-main {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: auto;
+    justify-content: space-between;
+}
+.start-content {
+    padding-top: 163px;
+
+    // .start-content__title
+    &__title {
+        margin-bottom: 42px;
+
+        max-width: 310px;
+        font-family: 'Georgia';
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 130%;
+        /* or 57px */
+
+        color: $color-light-xl;
+    }
+    // .start-content__descr
+    &__descr {
+        margin-bottom: 42px;
+
+        max-width: 460px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        /* or 24px */
+
+        color: $color-dark-s;
+    }
+}

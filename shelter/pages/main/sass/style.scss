@@ -1,4 +1,21 @@
 @import 'base/fonts';
 @import 'base/variables';
 
-@import 'blocks/header';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Arial';
+    font-style: normal;
+
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+@import 'blocks/start';
+@import 'blocks/buttons';
