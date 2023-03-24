@@ -1,5 +1,6 @@
 @import 'base/fonts';
 @import 'base/variables';
+@import 'base/typography';
 
 * {
     margin: 0;
@@ -17,6 +18,8 @@
     width: 1200px;
 }
 
+
 @import 'blocks/start';
 @import 'blocks/buttons';
 @import 'blocks/about';
+@import 'blocks/pets';

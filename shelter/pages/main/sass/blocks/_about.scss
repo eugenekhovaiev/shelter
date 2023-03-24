@@ -19,30 +19,20 @@
     // .about__content
     &__content {
         p {
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 160%;
-            /* or 24px */
+            margin-bottom: 25px;
 
             color: $color-dark-xl;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
-        // .paragraph-1
-        .paragraph-1 {
-            margin-bottom: 25px;
-        }
     }
     // .about__title
     &__title {
         margin-bottom: 25px;
         width: 370px;
-
-        font-family: 'Georgia';
-        font-weight: 400;
-        font-size: 35px;
-        line-height: 130%;
-        /* or 45px */
-        letter-spacing: 0.06em;
 
         color: $color-dark-l;
     }

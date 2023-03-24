@@ -1,0 +1,76 @@
+.header-2 {
+    /* h2 */
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 130%;
+    /* or 57px */
+
+    color: $color-dark-l;
+}
+.header-3 {
+    /* h3 */
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    /* or 45px */
+    letter-spacing: 0.06em;
+
+    color: $color-dark-l;
+}
+.header-4 {
+    /* h4 */
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    /* identical to box height, or 23px */
+    letter-spacing: 0.06em;
+
+    color: $color-dark-l;
+}
+.header-5 {
+    /* h5 */
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    /* identical to box height, or 17px */
+    letter-spacing: 0.06em;
+
+    color: $color-dark-l;
+}
+
+.paragraph-l {
+    /* paragraph-l */
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    /* identical to box height, or 24px */
+
+    color: $color-dark-xl;
+}
+
+.paragraph-s {
+    /* paragraph-s */
+
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+
+    color: $color-dark-m;
+}

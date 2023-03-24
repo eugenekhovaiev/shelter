@@ -73,7 +73,7 @@
             }
         }
     }
-    // .menu__link
+    // .menu__text
     &__text {
         font-weight: 400;
         font-size: 15px;
@@ -110,23 +110,12 @@
         margin-bottom: 42px;
 
         max-width: 310px;
-        font-family: 'Georgia';
-        font-weight: 400;
-        font-size: 44px;
-        line-height: 130%;
-        /* or 57px */
 
         color: $color-light-xl;
     }
     // .start-content__descr
     &__descr {
         margin-bottom: 42px;
-
-        max-width: 460px;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 160%;
-        /* or 24px */
 
         color: $color-dark-s;
     }
