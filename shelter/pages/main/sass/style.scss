@@ -1,6 +1,7 @@
 @import '../../../assets/base/fonts';
 @import '../../../assets/base/variables';
 @import '../../../assets/base/typography';
+@import '../../../assets/base/buttons';
 
 * {
     margin: 0;
@@ -20,7 +21,6 @@
 
 
 @import 'blocks/start';
-@import 'blocks/buttons';
 @import 'blocks/about';
 @import 'blocks/pets';
 @import 'blocks/help';
