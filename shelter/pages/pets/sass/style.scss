@@ -1,0 +1,25 @@
+@import '../../../assets/base/fonts';
+@import '../../../assets/base/variables';
+@import '../../../assets/base/typography';
+@import '../../../assets/base/buttons';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Arial';
+    font-style: normal;
+
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+
+@import 'blocks/header';
+@import 'blocks/pets';
+@import 'blocks/footer';
