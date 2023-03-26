@@ -22,7 +22,9 @@
 
     &:hover {
         background-color: $color-primary-light;
-        // transform: translateY(-2px);
+    }
+    &:active {
+        transform: translateY(2px);
     }
 
     &_secondary {
@@ -49,11 +51,17 @@
         &:hover {
             background-color: $color-primary-light;
         }
+        &:active {
+            transform: translateY(2px);
+        }
 
     }
 
     &_next {
         transform: rotate(180deg);
+        &:active {
+            transform: rotate(180deg) translateY(-2px);
+        }
     }
 
     &_paginator {
@@ -74,6 +82,9 @@
 
         &:hover {
             background-color: $color-primary-light;
+        }
+        &:active {
+            transform: translateY(2px);
         }
 
         &_active {

@@ -37,6 +37,10 @@
 
         background-color: $color-primary;
         border-radius: 9px;
+
+        &:hover {
+            background-color: $color-primary-light;
+        }
     }
     // .donation__icon
     &__icon {
