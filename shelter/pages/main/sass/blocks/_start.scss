@@ -1,7 +1,9 @@
 .start {
     padding-top: 30px;
 
-    background: url('../../../assets/img/start/start-screen-gradient-background.png') center center / cover no-repeat;
+    background: url('../../../assets/img/bg/noise_transparent@2x.png') center center repeat, 
+                radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%),
+                #211F20;
 
     // .start__puppy
     &__puppy {

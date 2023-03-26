@@ -4,7 +4,9 @@
     height: 350px;
     overflow: hidden;
 
-    background: url('../../../assets/img/footer/footer-background.png') center center / cover no-repeat;
+    background: url('../../../assets/img/bg/noise_transparent@2x.png') center center repeat, 
+                radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
+                #211F20;
 
     // .footer__wrapper
     &__wrapper {
