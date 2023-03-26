@@ -70,8 +70,7 @@
             }
 
             .menu__line {
-                opacity: 1;
-                width: 100%;
+                animation: ani 0.5s forwards;
             }
         }
     }
@@ -120,5 +119,16 @@
         margin-bottom: 42px;
 
         color: $color-dark-s;
+    }
+}
+
+@keyframes ani {
+    0% {
+        width: 0; 
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
     }
 }

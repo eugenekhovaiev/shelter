@@ -62,9 +62,9 @@
             }
 
             .menu__line {
-                opacity: 1;
-                width: 100%;
+                animation: ani 0.5s forwards;
             }
+
         }
     }
     // .menu__text
@@ -73,20 +73,30 @@
         font-size: 15px;
         line-height: 160%;
         /* identical to box height, or 24px */
-    
+        
         color: $color-dark-l;
-
+        
         transition: inherit;
     }
     // .menu__line
     &__line {
         margin: 0 auto;
         height: 3px;
-        // width: 100%;
         background-color: $color-primary;
-
+        
         transition: inherit;
         opacity: 0;
         width: 0;
+    }
+}
+
+@keyframes ani {
+    0% {
+        width: 0; 
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
     }
 }
