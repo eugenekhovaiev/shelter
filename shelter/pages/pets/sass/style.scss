@@ -14,11 +14,14 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     margin: 0 auto;
     width: 1200px;
 }
-
 
 @import 'blocks/header';
 @import 'blocks/pets';
