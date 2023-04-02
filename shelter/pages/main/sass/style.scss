@@ -31,6 +31,26 @@ a {
     }
 }
 
+body {
+    section {
+        display: none;
+
+    }
+    .start {
+        display: block;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .container {
+        // width: calc(100vh - 60px);
+        width: auto;
+    }
+}
 
 @import 'blocks/start';
 @import 'blocks/about';

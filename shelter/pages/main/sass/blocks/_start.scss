@@ -9,6 +9,7 @@
     &__puppy {
         img {
             display: block;
+            max-width: 100%;
         }
     }
 }
@@ -143,4 +144,34 @@
         width: 100%;
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 1279px) {
+    .start {
+        padding: 30px 30px 0;
+
+        &__puppy {
+            margin: 0 0 0 auto;
+
+            max-width: 569px;
+        }
+    }
+
+    .header {
+        margin-bottom: 60px;
+    }
+
+    .start-main {
+        grid-template-columns: auto;
+    }
+
+    .start-content {
+        padding: 0 124px;
+        margin-bottom: 100px;
+    }
+
+    .button_start {
+        margin: 0 auto;
+    }
+
 }
