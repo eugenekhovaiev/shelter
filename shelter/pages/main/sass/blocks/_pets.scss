@@ -76,6 +76,10 @@
     // .card__picture
     &__picture {
         margin-bottom: 26px;
+
+        img {
+            max-width: 100%;
+        }
     }
     // .card__title
     &__title {
@@ -98,3 +102,56 @@
     }
 }
 
+@media screen and (max-width: 1279px) {
+    .pets {
+        padding: 80px 30px 100px;
+    }
+
+    .slider {
+        &__inner {
+            grid-template-columns: repeat(2, 270px);
+            column-gap: 5.2vw;
+
+            .card:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pets {
+        padding: 42px 10px;
+
+        &__title {
+            margin-bottom: 42px;
+        }
+    }
+    .slider {
+        margin-bottom: 114px;
+
+        &__inner {
+            grid-template-columns: 270px;
+
+            .card:last-child {
+                display: none;
+            }
+            .card:nth-child(2) {
+                display: none;
+            }
+        }
+
+        &__prev {
+            top: auto;
+            bottom: -72px;
+            left: 19%;
+            
+        }
+
+        &__next {
+            top: auto;
+            bottom: -72px;
+            right: 19%;
+        }
+    }
+}
