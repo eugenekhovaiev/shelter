@@ -7,6 +7,8 @@
 
     // .start__puppy
     &__puppy {
+        width: 698px;
+
         img {
             display: block;
             max-width: 100%;
@@ -24,7 +26,6 @@
 
     // .header__logo
     &__logo {
-        // transition: 0.5s all;
         &:hover {
             background-color: rgba(13, 13, 13, 0.1);
             box-shadow: 0px 2px 25px 14px rgba(13, 13, 13, 0.1);
@@ -110,6 +111,11 @@
         width: 0;
     }
 }
+
+.burger {
+    display: none;
+}
+
 .start-main {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -123,7 +129,7 @@
     &__title {
         margin-bottom: 42px;
 
-        max-width: 310px;
+        // max-width: 310px;
 
         color: $color-light-xl;
     }
@@ -174,4 +180,73 @@
         margin: 0 auto;
     }
 
+}
+
+@media screen and (max-width: 767px) {
+    
+    .start {
+        padding: 30px 10px 0;
+        // overflow: hidden;
+        &__puppy {
+            width: 260px;
+        }
+        
+        .header {
+            margin: 0 10px 60px;
+            grid-template-columns: minmax(184px, auto)  30px;
+            align-items: center;
+        }
+
+        .menu {
+            display: none;
+        }
+    
+        .burger {
+            display: flex;
+
+            flex-direction: column;
+            justify-content: space-between;
+
+            width: 30px;
+            height: 22px;
+
+            transition: 0.5s all;
+
+            div {
+                display: block;
+                
+                height: 2px;
+                background-color: $color-primary;
+            }
+
+            &:active {
+                transform: translateY(2px);
+            }
+        }
+
+        .start-main {
+            grid-template-columns: 100%;
+        }
+
+        .start-content {
+            padding: 0;
+            margin-bottom: 105px;
+
+            margin: 0 auto 105px;
+
+            max-width: 450px;
+
+            justify-content: center;
+
+            &__title {
+                text-align: center;
+                padding-left: -10px;
+                padding-right: -10px;
+            }
+
+            &__descr {
+                text-align: center;
+            }
+        }
+    }
 }
