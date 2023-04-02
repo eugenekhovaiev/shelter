@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 1279px) {
     .about {
-        padding: 80px 168px 96px;
+        padding: 80px 0 96px;
 
         &__wrapper {
             grid-template-columns: auto;
@@ -54,6 +54,7 @@
 
         &__content {
             padding-top: 0;
+            width: 56%;
         }
 
         &__picture {
@@ -75,6 +76,7 @@
         }
 
         &__content {
+            width: 100%;
             p {
                 padding: 0 15px;
                 margin-bottom: 21px;
