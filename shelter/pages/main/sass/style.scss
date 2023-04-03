@@ -31,36 +31,6 @@ a {
     }
 }
 
-body {
-    section {
-        display: none;
-
-    }
-    .start {
-        display: block;
-    }
-
-    .about {
-        display: block;
-    }
-
-    .pets {
-        display: block;
-    }
-
-    .help {
-        display: block;
-    }
-
-    .donation {
-        display: block;
-    }
-
-    footer {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 1279px) {
     .container {
         // width: calc(100vh - 60px);
@@ -68,15 +38,7 @@ body {
     }
 }
 
-@media screen and (max-width: 767px) {
-    
-}
-
-// @media (hover: none) {
-//     *:hover {
-        
-//     }
-// }
+// TODO add hover only on desktop
 
 @import 'blocks/start';
 @import 'blocks/about';

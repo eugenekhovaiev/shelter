@@ -64,6 +64,8 @@
 
 @media screen and (max-width: 1279px) {
     .donation {
+        padding-bottom: 96px;
+
         &__wrapper {
             grid-template-columns: auto;
             justify-content: center;
@@ -84,7 +86,7 @@
 
 @media screen and (max-width: 767px) {
     .donation {
-        padding: 42px 10px;
+        padding: 42px 10px 39px;
 
         &__wrapper {
             row-gap: 42px;
