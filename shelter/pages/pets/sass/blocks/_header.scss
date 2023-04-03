@@ -55,3 +55,15 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 1279px) {
+    .header-section {
+        padding: 30px 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-section {
+        padding: 30px 20px;
+    }
+}
