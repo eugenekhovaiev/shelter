@@ -34,16 +34,11 @@ a {
 
 @media screen and (max-width: 1279px) {
     .container {
-        // width: calc(100vh - 60px);
         width: auto;
     }
 }
 
 // TODO add hover only on desktop
-
-.pets {
-    display: none;
-}
 
 @import 
     '../../../assets/base/header',
