@@ -89,6 +89,11 @@
 
         &_active {
             background: $color-primary;
+            cursor: default;
+
+            &:hover {
+                background-color: $color-primary;
+            }
         }
 
         &_inactive {
