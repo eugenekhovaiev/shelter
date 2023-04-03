@@ -14,6 +14,10 @@
     // .donation__dog
     &__dog {
         padding-top: 11px;
+        width: 505px;
+        img {
+            max-width: 100%;
+        }
     }
     // .donation__content
     &__content {
@@ -37,10 +41,6 @@
 
         background-color: $color-primary;
         border-radius: 9px;
-
-        &:hover {
-            background-color: $color-primary-light;
-        }
     }
     // .donation__icon
     &__icon {
@@ -55,5 +55,76 @@
     }
     // .donation__text
     &__text {
+    }
+}
+
+@media (hover: hover) {
+    .donation__credit-card {
+        &:hover {
+            background-color: $color-primary-light;
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .donation {
+        padding-bottom: 96px;
+
+        &__wrapper {
+            grid-template-columns: auto;
+            justify-content: center;
+            justify-items: center;
+            row-gap: 60px;
+        }
+        
+        &__content {
+            width: 49.5%;
+        }
+
+        &__dog {
+            grid-row: 2 / 3;
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .donation {
+        padding: 42px 10px 39px;
+
+        &__wrapper {
+            row-gap: 42px;
+        }
+
+        &__content {
+            padding: 0 10px;
+            width: 100%;
+            max-width: 380px;
+
+            row-gap: 22px;
+        }
+
+        &__subtitle {
+            text-align: center;
+            letter-spacing: 0;
+        }
+
+        &__credit-card {
+            width: 281px;
+            margin: 2px auto -2px;
+        }
+
+        &__card-number {
+            font-size: 15px;
+            line-height: 110%;
+        }
+
+        &__text {
+            text-align: justify;
+        }
+
+        &__dog {
+            width: 260px;
+        }
     }
 }

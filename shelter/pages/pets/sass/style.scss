@@ -1,7 +1,8 @@
-@import '../../../assets/base/fonts';
-@import '../../../assets/base/variables';
-@import '../../../assets/base/typography';
-@import '../../../assets/base/buttons';
+@import 
+    '../../../assets/base/fonts',
+    '../../../assets/base/variables',
+    '../../../assets/base/typography',
+    '../../../assets/base/buttons';
 
 * {
     margin: 0;
@@ -31,6 +32,17 @@ a {
     }
 }
 
-@import 'blocks/header';
-@import 'blocks/pets';
-@import 'blocks/footer';
+@media screen and (max-width: 1279px) {
+    .container {
+        width: auto;
+    }
+}
+
+// TODO add hover only on desktop
+
+@import 
+    '../../../assets/base/header',
+    'blocks/header',
+    '../../../assets/base/card',
+    'blocks/pets',
+    '../../../assets/base/footer';

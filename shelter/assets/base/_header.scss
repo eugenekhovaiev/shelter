@@ -1,0 +1,161 @@
+.header {
+    margin-bottom: 90px;
+
+    display: grid;
+    grid-template-columns: minmax(184px, auto)  443px;
+    justify-content: space-between;
+    column-gap: auto;
+
+    // .header__logo
+    &__logo {
+    }
+    // .header__title
+    &__title {
+        margin-bottom: 10px;
+
+        font-family: 'Georgia';
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 110%;
+        /* or 35px */
+        letter-spacing: 0.06em;
+
+        color: $color-primary;
+
+        transition: inherit;
+    }
+    // .header__subtitle
+    &__subtitle {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        
+        color: $color-light-xl;
+    }
+}
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 35px;
+    align-content: center;
+    // .menu__item
+    &__item {
+        display: block;
+        
+        transition: 0.5s all;
+
+        &_active {
+            .menu__text {
+                color: $color-light-s;
+            }
+
+            .menu__line {
+                animation: ani 0.5s forwards;
+            }
+        }
+    }
+    // .menu__text
+    &__text {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        /* identical to box height, or 24px */
+    
+        color: $color-dark-s;
+
+        transition: inherit;
+    }
+    // .menu__line
+    &__line {
+        margin: 0 auto;
+        height: 3px;
+        // width: 100%;
+        background-color: $color-primary;
+
+        transition: inherit;
+        opacity: 0;
+        width: 0;
+    }
+}
+
+.burger {
+    display: none;
+}
+
+@keyframes ani {
+    0% {
+        width: 0; 
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@media (hover: hover) {
+    .header {
+        &__logo {
+            &:hover {
+                background-color: rgba(13, 13, 13, 0.1);
+                box-shadow: 0px 2px 25px 14px rgba(13, 13, 13, 0.1);
+    
+                .header__title {
+                    color: $color-primary-light;
+                }
+            }
+        }
+    }
+    .menu {
+        &__item {         
+            &:hover {
+                .menu__text {
+                    color: $color-light-s;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .header {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        margin: 0 10px 60px;
+        grid-template-columns: minmax(184px, auto)  30px;
+        align-items: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 30px;
+        height: 22px;
+
+        transition: 0.5s all;
+
+        div {
+            display: block;
+            
+            height: 2px;
+            background-color: $color-primary;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+}

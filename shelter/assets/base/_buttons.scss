@@ -20,15 +20,12 @@
 
     transition: 0.5s all;
 
-    &:hover {
-        background-color: $color-primary-light;
-    }
     &:active {
         transform: translateY(2px);
     }
 
     &_secondary {
-        background-color: $color-light-xl;
+        background-color: rgba(0, 0, 0, 0);
         border: 2px solid $color-primary;
     }
 
@@ -38,7 +35,7 @@
 
         border: 2px solid $color-primary;
         border-radius: 100px;
-        background-color: $color-light-xl;
+        background-color: rgba(0, 0, 0, 0);
 
         display: flex;
         justify-content: center;
@@ -48,9 +45,6 @@
 
         cursor: pointer;
 
-        &:hover {
-            background-color: $color-primary-light;
-        }
         &:active {
             transform: translateY(2px);
         }
@@ -70,7 +64,7 @@
 
         border: 2px solid $color-primary;
         border-radius: 100px;
-        background-color: $color-light-xl;
+        background-color: rgba(0, 0, 0, 0);
 
         display: flex;
         justify-content: center;
@@ -80,15 +74,13 @@
 
         cursor: pointer;
 
-        &:hover {
-            background-color: $color-primary-light;
-        }
         &:active {
             transform: translateY(2px);
         }
 
         &_active {
             background: $color-primary;
+            cursor: default;
         }
 
         &_inactive {
@@ -96,11 +88,35 @@
             color: $color-dark-s;
 
             cursor: default;
-
-            &:hover {
-                background-color: $color-light-xl;
-            }
         }
     }
 }
 
+@media (hover: hover) {
+    .button {
+        &:hover {
+            background-color: $color-primary-light;
+        }
+
+        &_arrow {
+            &:hover {
+                background-color: $color-primary-light;
+            }
+        }
+        &_paginator {
+            &:hover {
+                background-color: $color-primary-light;
+            }
+            &_active {
+                &:hover {
+                    background-color: $color-primary;
+                } 
+            }
+            &_inactive {
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0);
+                }
+            }
+        }
+    }
+}

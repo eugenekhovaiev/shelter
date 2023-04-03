@@ -1,101 +1,37 @@
+.header-section {
+    padding: 30px 0;
+}
+
 .header {
-    padding: 30px 40px;
+    margin: 0;
 
     background-color: $color-light-xl;
 
-    // .header__wrapper
-    &__wrapper {
-        display: grid;
-        grid-template-columns: minmax(184px, auto)  443px;
-        justify-content: space-between;
-        column-gap: auto;
-    }
-
     // .header__logo
     &__logo {
-        transition: 0.5s all;
-        &:hover {
-            background-color: rgba(13, 13, 13, 0.05);
-            box-shadow: 0px 2px 25px 14px rgba(13, 13, 13, 0.05);
-
-            .header__title {
-                color: $color-dark-2xl;
-            }
-        }
+        
     }
     // .header__title
     &__title {
-        margin-bottom: 10px;
-
-        font-family: 'Georgia';
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 110%;
-        /* or 35px */
-        letter-spacing: 0.06em;
-
         color: $color-dark-l;
     }
     // .header__subtitle
     &__subtitle {
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 15px;
-        letter-spacing: 0.1em;
-
         color: $color-dark-3xl;
-
-        text-align: center;
     }
 }
 .menu {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    column-gap: 35px;
-    align-content: center;
     // .menu__item
-    &__item {
-        display: block;
-        
-        transition: 0.5s all;
-        
-        &:hover {
-            .menu__text {
-                color: $color-dark-3xl;
-            }
-        }
-
+    &__item {      
         &_active {
             .menu__text {
                 color: $color-dark-3xl;
             }
-
-            .menu__line {
-                animation: ani 0.5s forwards;
-            }
-
         }
     }
     // .menu__text
     &__text {
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 160%;
-        /* identical to box height, or 24px */
-        
         color: $color-dark-l;
-        
-        transition: inherit;
-    }
-    // .menu__line
-    &__line {
-        margin: 0 auto;
-        height: 3px;
-        background-color: $color-primary;
-        
-        transition: inherit;
-        opacity: 0;
-        width: 0;
     }
 }
 
@@ -107,5 +43,40 @@
     100% {
         width: 100%;
         opacity: 1;
+    }
+}
+
+@media (hover: hover) {
+    .header__logo {
+        &:hover {
+            .header__title {
+                color: $color-dark-2xl;
+            }
+        }
+    }
+    .menu__item {
+        &:hover {
+            .menu__text {
+                color: $color-dark-3xl;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .header-section {
+        padding: 30px 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-section {
+        padding: 30px 20px;
+    }
+
+    .burger {
+        div {
+            background-color: #000000;
+        }
     }
 }
