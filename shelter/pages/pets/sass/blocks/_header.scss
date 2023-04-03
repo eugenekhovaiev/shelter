@@ -9,11 +9,7 @@
 
     // .header__logo
     &__logo {
-        &:hover {
-            .header__title {
-                color: $color-dark-2xl;
-            }
-        }
+        
     }
     // .header__title
     &__title {
@@ -27,12 +23,6 @@
 .menu {
     // .menu__item
     &__item {      
-        &:hover {
-            .menu__text {
-                color: $color-dark-3xl;
-            }
-        }
-
         &_active {
             .menu__text {
                 color: $color-dark-3xl;
@@ -53,6 +43,23 @@
     100% {
         width: 100%;
         opacity: 1;
+    }
+}
+
+@media (hover: hover) {
+    .header__logo {
+        &:hover {
+            .header__title {
+                color: $color-dark-2xl;
+            }
+        }
+    }
+    .menu__item {
+        &:hover {
+            .menu__text {
+                color: $color-dark-3xl;
+            }
+        }
     }
 }
 

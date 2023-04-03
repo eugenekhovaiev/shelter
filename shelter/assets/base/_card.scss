@@ -12,16 +12,6 @@
     transition: 0.5s all;
     overflow: hidden;
 
-    &:hover {
-        background-color: $color-light-xl;
-        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-
-        .card__button {
-            background-color: $color-primary-light;
-        }
-    }
-    
-
     // .card__picture
     &__picture {
         margin-bottom: 30px;
@@ -52,5 +42,18 @@
     // .card__button
     &__button {
         margin-bottom: 30px;
+    }
+}
+
+@media (hover: hover) {
+    .card {
+        &:hover {
+            background-color: $color-light-xl;
+            box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    
+            .card__button {
+                background-color: $color-primary-light;
+            }
+        }
     }
 }

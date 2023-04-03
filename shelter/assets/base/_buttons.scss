@@ -20,9 +20,6 @@
 
     transition: 0.5s all;
 
-    &:hover {
-        background-color: $color-primary-light;
-    }
     &:active {
         transform: translateY(2px);
     }
@@ -48,9 +45,6 @@
 
         cursor: pointer;
 
-        &:hover {
-            background-color: $color-primary-light;
-        }
         &:active {
             transform: translateY(2px);
         }
@@ -80,9 +74,6 @@
 
         cursor: pointer;
 
-        &:hover {
-            background-color: $color-primary-light;
-        }
         &:active {
             transform: translateY(2px);
         }
@@ -90,10 +81,6 @@
         &_active {
             background: $color-primary;
             cursor: default;
-
-            &:hover {
-                background-color: $color-primary;
-            }
         }
 
         &_inactive {
@@ -101,11 +88,35 @@
             color: $color-dark-s;
 
             cursor: default;
-
-            &:hover {
-                background-color: rgba(0, 0, 0, 0);
-            }
         }
     }
 }
 
+@media (hover: hover) {
+    .button {
+        &:hover {
+            background-color: $color-primary-light;
+        }
+
+        &_arrow {
+            &:hover {
+                background-color: $color-primary-light;
+            }
+        }
+        &_paginator {
+            &:hover {
+                background-color: $color-primary-light;
+            }
+            &_active {
+                &:hover {
+                    background-color: $color-primary;
+                } 
+            }
+            &_inactive {
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0);
+                }
+            }
+        }
+    }
+}
