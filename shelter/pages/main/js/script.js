@@ -324,7 +324,6 @@ window.addEventListener('DOMContentLoaded', () => {
     
     sliderPrev.addEventListener('click', () => {
         createdSlides = document.querySelectorAll('.slide');
-        console.log('pre: ' + pos);
         if (pos === 1) {
             createdCards.reverse();
         }
