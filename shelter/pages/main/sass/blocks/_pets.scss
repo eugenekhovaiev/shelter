@@ -3,6 +3,8 @@
 
     background-color: $color-light-l;
 
+    position: relative;
+
     // .pets__wrapper
     &__wrapper {
         display: flex;
@@ -25,29 +27,34 @@
 
 .slider {
     margin-bottom: 60px;
-    width: 100%;
+    width: 990px;
+    height: 435px;
     position: relative;
+
+    overflow: hidden;
 
     // .slider__inner
     &__inner {
-        display: grid;
-        grid-template-columns: repeat(3, 270px);
-        column-gap: 90px;
+        .slide {
+            display: grid;
+            grid-template-columns: repeat(3, 270px);
+            column-gap: 90px;
+            position: absolute;
+            transition: 0.5s all;
+        }
+    }
+}
 
-        justify-content: center;
-    }
-    // .slider__prev
-    &__prev {
-        position: absolute;
-        left: 0;
-        top: 192px;
-    }
-    // .slider__next
-    &__next {
-        position: absolute;
-        right: 0;
-        top: 192px;
-    }
+.slider-prev {
+    position: absolute;
+    left: 0px;
+    top: 342px;
+}
+
+.slider-next {
+    position: absolute;
+    right: 0px;
+    top: 342px;
 }
 
 
@@ -57,14 +64,15 @@
     }
 
     .slider {
-        &__inner {
-            grid-template-columns: repeat(2, 270px);
-            column-gap: 5.2vw;
+        width: 580px;
 
-            .card:last-child {
-                display: none;
+        &__inner {
+            .slide {
+                grid-template-columns: repeat(2, 270px);
+                column-gap: 40px;
             }
         }
+
     }
 }
 
@@ -78,29 +86,26 @@
     }
     .slider {
         margin-bottom: 114px;
+        width: 270px;
 
         &__inner {
             grid-template-columns: 270px;
-
-            .card:last-child {
-                display: none;
-            }
-            .card:nth-child(2) {
-                display: none;
+            .slide {
+                grid-template-columns: 270px;
             }
         }
+    }
+    
+    .slider-prev {
+        top: auto;
+        bottom: 95px;
+        left: 19.2%;
+        
+    }
 
-        &__prev {
-            top: auto;
-            bottom: -72px;
-            left: 19%;
-            
-        }
-
-        &__next {
-            top: auto;
-            bottom: -72px;
-            right: 19%;
-        }
+    .slider-next {
+        top: auto;
+        bottom: 95px;
+        right: 19.2%;
     }
 }
