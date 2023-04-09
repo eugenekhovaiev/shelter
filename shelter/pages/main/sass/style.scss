@@ -33,6 +33,10 @@ a {
     }
 }
 
+b {
+    font-family: inherit;
+}
+
 @media screen and (max-width: 1279px) {
     .container {
         width: auto;
@@ -46,6 +50,7 @@ a {
     'blocks/start',
     'blocks/about',
     '../../../assets/base/card',
+    '../../../assets/base/card-popup',
     'blocks/pets',
     'blocks/help',
     'blocks/donation',

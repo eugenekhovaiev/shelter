@@ -1,11 +1,17 @@
 "use strict";
 
+
 window.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger'),
         menu = document.querySelector('.menu'),
-        overlay = document.querySelector('.overlay'),
+        overlay = document.querySelector('.overlay_menu'),
         menuItems = document.querySelectorAll('.menu__item');
 
+    let pageWidth = document.documentElement.scrollWidth;
+    window.addEventListener('resize', () => {
+        pageWidth = document.documentElement.scrollWidth;
+    });
+    
     // Открытие-закрытие бургер-меню при нажатии на иконку бургера  
     burger.addEventListener('click', () => {
         burger.classList.toggle('burger_active');
@@ -17,22 +23,12 @@ window.addEventListener('DOMContentLoaded', () => {
     // Закрытие бургер-меню при нажатии на любую из ссылок в меню  
     menuItems.forEach(item => {
         item.addEventListener('click', () => {
-            burger.classList.toggle('burger_active');
-            menu.classList.toggle('menu_active');
-            overlay.classList.toggle('overlay_active');
-            document.body.classList.toggle('no-scroll');
-
-            // ?Пробный функционал для изменения класса активности пункта меню 
-
-            // menuItems.forEach(item => {
-            //     for (let key in item.classList) {
-            //         if (item.classList[key] == 'menu__item_active') {
-            //             console.log(true);
-            //             item.classList.toggle('menu__item_active');
-            //         }
-            //     }
-            // });
-            // item.classList.toggle('menu__item_active');
+            if (pageWidth < 768) {
+                burger.classList.toggle('burger_active');
+                menu.classList.toggle('menu_active');
+                overlay.classList.toggle('overlay_active');
+                document.body.classList.toggle('no-scroll');
+            }
         });
     });
 
@@ -114,10 +110,14 @@ window.addEventListener('DOMContentLoaded', () => {
     //     // }
     // });
 
+    const overlayPopup = document.querySelector('.overlay_popup'),
+        modalWindow = document.querySelector('.card-popup'),
+        popupClose = document.querySelector('.card-popup__close');
+
     const sliderInner = document.querySelector('.slider__inner');
     const sliderNext = document.querySelector('.slider-next');
     const sliderPrev = document.querySelector('.slider-prev');
-    
+
     let cards = [];
     let createdSlides;
     let viewport = document.querySelector('.slider').clientWidth;
@@ -242,6 +242,8 @@ window.addEventListener('DOMContentLoaded', () => {
         let cardName;
         for (let i = 0; i < cardAmount; i++) {
             card = createRandomCard();
+            // console.log(card);
+            // console.log(listenToCard(card));
             cardName = card.querySelector('.card__title').innerHTML;
             if (!createdCards.includes(cardName)) {
                 createdCards.push(cardName);
@@ -258,6 +260,7 @@ window.addEventListener('DOMContentLoaded', () => {
     
     let cardsInSlide = 0;
 
+    let cardsOnPage = [];
     function drawSlide(where) {
         let slide;
         if (viewport === 990) {
@@ -277,6 +280,9 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
             sliderInner.prepend(slide);
         }
+
+
+        cardsOnPage = sliderInner.querySelectorAll('.card');
     };
 
     function initSlider() {
@@ -285,16 +291,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
     initSlider();
 
+
     let viewportBefore = viewport;
     window.addEventListener('resize', () => {
         viewport = document.querySelector('.slider').clientWidth;
         createdSlides = document.querySelectorAll('.slide');
+        cardsOnPage = sliderInner.querySelectorAll('.card');
         
         if (viewport !== viewportBefore) {
             sliderInner.innerHTML = '';
             initSlider();
             viewportBefore = viewport;
         }
+        listenToAllCards();
     });
 
     let pos = 0;
@@ -317,6 +326,8 @@ window.addEventListener('DOMContentLoaded', () => {
                     createdSlides[0].remove();
                 }, 500);
             }
+
+            listenToAllCards();
         }, 100);
         
         pos = 1;
@@ -341,8 +352,62 @@ window.addEventListener('DOMContentLoaded', () => {
                     createdSlides[createdSlides.length - 1].remove();
                 }, 500);
             }
+
+
+            listenToAllCards();
         }, 100);
         
         pos = -1;
     });
+
+
+    // Pop-up
+    
+    listenToAllCards();
+
+    function listenToAllCards() {
+        cardsOnPage.forEach(card => {
+            card.addEventListener('click', () => {
+                changePopup(getCardNumber(card));
+                // console.log(getCardNumber(card));
+                modalWindow.classList.toggle('card-popup_active');
+                overlayPopup.classList.toggle('overlay_active');
+                document.body.classList.toggle('no-scroll');
+            });
+        });
+    };
+
+    overlayPopup.addEventListener('click', () => {
+        modalWindow.classList.toggle('card-popup_active');
+        overlayPopup.classList.toggle('overlay_active');
+        document.body.classList.toggle('no-scroll');
+    });
+
+    popupClose.addEventListener('click', () => {
+        modalWindow.classList.toggle('card-popup_active');
+        overlayPopup.classList.toggle('overlay_active');
+        document.body.classList.toggle('no-scroll');
+    });
+
+    function changePopup(cardNumber) {
+        modalWindow.querySelector('.card-popup__title').innerHTML = pets[cardNumber].name;
+        modalWindow.querySelector('img').src = pets[cardNumber].img;
+        modalWindow.querySelector('.pet-type').innerHTML = pets[cardNumber].type;
+        modalWindow.querySelector('.pet-breed').innerHTML = pets[cardNumber].breed;
+        modalWindow.querySelector('.card-popup__descr').innerHTML = pets[cardNumber].description;
+        modalWindow.querySelector('.pet-age').innerHTML = pets[cardNumber].age;
+        modalWindow.querySelector('.pet-inoculations').innerHTML = pets[cardNumber].inoculations.join(', ');
+        modalWindow.querySelector('.pet-diseases').innerHTML = pets[cardNumber].diseases.join(', ');
+        modalWindow.querySelector('.pet-parasites').innerHTML = pets[cardNumber].parasites.join(', ');
+    };
+
+    function getCardNumber(card) {
+        let petName = card.querySelector('.card__title').innerHTML;
+        console.log(petName);
+        for (let i = 0; i < pets.length; i++) {
+            if (pets[i].name === petName) {
+                return i;
+            }
+        }
+    }
 });
