@@ -49,74 +49,45 @@
         <div class="container">
             <div class="pets__wrapper">
                 <h3 class="pets__title header-3">Our friends who <br> are looking for a house</h3>
-                <div class="pets__cards">
-                    <div class="card">
-                        <div class="card__picture">
-                            <img src="../../assets/img/cards/katrine.png" alt="katrine">
-                        </div>
-                        <div class="card__title">Katrine</div>
-                        <a href='#' class="card__button button button_secondary">Learn more</a>
-                    </div>
-                    <div class="card">
-                        <div class="card__picture">
-                            <img src="../../assets/img/cards/jennifer.png" alt="jennifer">
-                        </div>
-                        <div class="card__title">Jennifer</div>
-                        <a href='#' class="card__button button button_secondary">Learn more</a>
-                    </div>
-                    <div class="card">
-                        <div class="card__picture">
-                            <img src="../../assets/img/cards/woody.png" alt="woody">
-                        </div>
-                        <div class="card__title">Woody</div>
-                        <a href='#' class="card__button button button_secondary">Learn more</a>
-                    </div>
-                    <div class="card">
-                        <div class="card__picture">
-                            <img src="../../assets/img/cards/sophia.png" alt="sophia">
-                        </div>
-                        <div class="card__title">Sophia</div>
-                        <a href='#' class="card__button button button_secondary">Learn more</a>
-                    </div>
-                    <div class="card">
-                        <div class="card__picture">
-                            <img src="../../assets/img/cards/timmy.png" alt="timmy">
-                        </div>
-                        <div class="card__title">Timmy</div>
-                        <a href='#' class="card__button button button_secondary">Learn more</a>
-                    </div>
-                    <div class="card">
-                        <div class="card__picture">
-                            <img src="../../assets/img/cards/charly.png" alt="charly">
-                        </div>
-                        <div class="card__title">Charly</div>
-                        <a href='#' class="card__button button button_secondary">Learn more</a>
-                    </div>
-                    <div class="card">
-                        <div class="card__picture">
-                            <img src="../../assets/img/cards/scarlett.png" alt="scarlett">
-                        </div>
-                        <div class="card__title">Scarlett</div>
-                        <a href='#' class="card__button button button_secondary">Learn more</a>
-                    </div>
-                    <div class="card">
-                        <div class="card__picture">
-                            <img src="../../assets/img/cards/freddie.png" alt="freddie">
-                        </div>
-                        <div class="card__title">Freddie</div>
-                        <a href='#' class="card__button button button_secondary">Learn more</a>
+                <div class="pets__inner">
+                    <div class="pets__cards">
                     </div>
                 </div>
                 <div class="pets__pagination">
-                    <button type="button" class="button_paginator button_paginator_inactive header-4">&lt;&lt;</button>
-                    <button type="button" class="button_paginator button_paginator_inactive header-4">&lt;</button>
+                    <button type="button" class="button_paginator button_paginator_start button_paginator_inactive header-4">&lt;&lt;</button>
+                    <button type="button" class="button_paginator button_paginator_prev button_paginator_inactive header-4">&lt;</button>
                     <button type="button" class="button_paginator button_paginator_active header-4">1</button>
-                    <button type="button" class="button_paginator header-4">&gt;</button>
-                    <button type="button" class="button_paginator header-4">&gt;&gt;</button>
+                    <button type="button" class="button_paginator button_paginator_next header-4">&gt;</button>
+                    <button type="button" class="button_paginator button_paginator_end header-4">&gt;&gt;</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="card-popup">
+        <div class="card-popup__wrapper">
+            <div class="card-popup__picture">
+                <img src="../../assets/img/cards/modal/jennifer.png" alt="Jennifer">
+            </div>
+            <div class="card-popup__content">
+                <h3 class="card-popup__title header-3">Jennifer</h3>
+                <h4 class="card-popup__subtitle header-4"><span class="pet-type">Dog</span> - <span class="pet-breed">Labrador</span></h4>
+                <div class="card-popup__descr header-5">
+                    Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+                </div>
+                <ul class="card-popup__list">
+                    <li class="card-popup__list-item header-5"><b>Age:</b> <span class="pet-age">2 months</span></li>
+                    <li class="card-popup__list-item header-5"><b>Inoculations:</b> <span class="pet-inoculations">none</span></li>
+                    <li class="card-popup__list-item header-5"><b>Diseases:</b> <span class="pet-diseases">none</span></li>
+                    <li class="card-popup__list-item header-5"><b>Parasites:</b> <span class="pet-parasites">none</span></li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="card-popup__close button_arrow">
+            <img src="../../assets/icons/close.svg" alt="arrow">
+        </button>
+    </div>
+    <div class="overlay overlay_popup"></div>
 
     <footer class="footer" id="footer">
         <div class="container">

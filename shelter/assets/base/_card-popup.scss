@@ -34,8 +34,13 @@
         width: 500px;
         height: 500px;
         border-radius: 9px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
             width: 100%;
+            display: block;
         }
     }
     // .card-popup__content
@@ -111,7 +116,7 @@
 @media screen and (max-width: 1279px) {
     .card-popup {
         width: 640px;
-        height: 350px;
+        height: fit-content;
 
         &__wrapper {
             grid-template-columns: 350px 261px;
@@ -141,6 +146,7 @@
         }
         // .card-popup__list
         &__list {
+            margin-bottom: 12px;
         }
         // .card-popup__list-item
         &__list-item {

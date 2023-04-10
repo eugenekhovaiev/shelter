@@ -22,6 +22,7 @@ html {
 .container {
     margin: 0 auto;
     width: 1200px;
+    position: relative;
 }
 
 a {
@@ -32,17 +33,20 @@ a {
     }
 }
 
+b {
+    font-family: inherit;
+}
+
 @media screen and (max-width: 1279px) {
     .container {
         width: auto;
     }
 }
 
-// TODO add hover only on desktop
-
 @import 
     '../../../assets/base/header',
     'blocks/header',
     '../../../assets/base/card',
+    '../../../assets/base/card-popup',
     'blocks/pets',
     '../../../assets/base/footer';

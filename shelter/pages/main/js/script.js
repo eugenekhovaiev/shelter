@@ -41,74 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // // Слайдер
-    // const sliderInner = document.querySelector('.slider__inner'),
-    //     sliderPrev = document.querySelector('.slider-prev'),
-    //     sliderNext = document.querySelector('.slider-next'),
-    //     cardWidth = 270;
-    // let offset = 0,
-    //     viewport = document.querySelector('.slider').clientWidth,
-    //     sliderInnerColumnGap = 0,
-    //     count = 0;
-
-    // if (viewport === 990) {
-    //     sliderInnerColumnGap = 90;
-    // } else {
-    //     sliderInnerColumnGap = 40;
-    // }
-
-    // window.addEventListener('resize', () => {
-    //     viewport = document.querySelector('.slider').clientWidth;
-    //     if (viewport === 990) {
-    //         sliderInnerColumnGap = 90;
-    //     } else if (viewport === 580) {
-    //         sliderInnerColumnGap = 40;
-    //     }
-
-    //     offset = (cardWidth + sliderInnerColumnGap) * count;
-    //     // console.log(`offset: ${offset}`);
-    //     // console.log(`viewport: ${viewport}`);
-    //     sliderInner.style.left = -offset + 'px';
-    // });
-
-    // sliderNext.addEventListener('click', () => {
-    //     offset += viewport + sliderInnerColumnGap;
-    //     console.log(offset);
-    //     console.log(`viewport: ${viewport}`);
-    //     console.log(`ColumnGap: ${sliderInnerColumnGap}`);
-    //     sliderInner.style.left = -offset + 'px';
-
-    //     if (viewport === 990) {
-    //         count += 3;
-    //     } else if (viewport === 580) {
-    //         count += 2;
-    //     } else {
-    //         count++;
-    //     }
-    //     // if (offset < -(270 * 7)) {
-    //     //     offset = 0;
-    //     // }
-    // });
-
-    // sliderPrev.addEventListener('click', () => {
-    //     offset -= viewport + sliderInnerColumnGap;
-    //     console.log(offset);
-    //     sliderInner.style.left = -offset + 'px';
-    //     console.log(`viewport: ${viewport}`);
-    //     console.log(`ColumnGap: ${sliderInnerColumnGap}`);
-
-    //     if (viewport === 990) {
-    //         count -= 3;
-    //     } else if (viewport === 580) {
-    //         count -= 2;
-    //     } else {
-    //         count--;
-    //     }
-
-    //     // if (count < 0) {
-    //     //     offset = ;
-    //     // }
-    // });
+    // Слайдер
 
     const overlayPopup = document.querySelector('.overlay_popup'),
         modalWindow = document.querySelector('.card-popup'),
@@ -226,7 +159,7 @@ window.addEventListener('DOMContentLoaded', () => {
                                 <img src="${petImgURL}" alt="${petName}">
                             </div>
                             <div class="card__title">${petName}</div>
-                            <a href='#' class="card__button button button_secondary">Learn more</a>`
+                            <button class="card__button button button_secondary">Learn more</button>`
         return card;
     };
     
@@ -296,7 +229,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         viewport = document.querySelector('.slider').clientWidth;
         createdSlides = document.querySelectorAll('.slide');
-        cardsOnPage = sliderInner.querySelectorAll('.card');
+        // cardsOnPage = sliderInner.querySelectorAll('.card');
         
         if (viewport !== viewportBefore) {
             sliderInner.innerHTML = '';
@@ -403,7 +336,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function getCardNumber(card) {
         let petName = card.querySelector('.card__title').innerHTML;
-        console.log(petName);
         for (let i = 0; i < pets.length; i++) {
             if (pets[i].name === petName) {
                 return i;
